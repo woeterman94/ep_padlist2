@@ -1,0 +1,15 @@
+<html>
+<head>
+  <title>Pads</title>
+</head>
+<body>
+  <h1>Pads</h1>
+
+  <ul>
+    <% pads.forEach(function(pad){ %>
+      <li><a href="/<%= pad.toString() %>"><%= pad.toString() %></a></li>
+    <% }) %>
+  </ul>
+
+</body>
+</html>
