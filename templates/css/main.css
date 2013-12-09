@@ -27,6 +27,14 @@ li {
   list-style-type: none;
 }
 
+.filtering li {
+  display: none;
+}
+
+.filtering li.visible {
+  display: block;
+}
+
 a {
   color: #1C89D4;
   text-decoration: none;
