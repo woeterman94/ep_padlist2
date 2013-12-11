@@ -1,6 +1,6 @@
 {
   "name": "ep_padlist",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Display a list of pads at /list",
   "main": "index.js",
   "scripts": {
