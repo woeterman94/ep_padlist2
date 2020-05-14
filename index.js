@@ -19,7 +19,7 @@ exports.expressCreateServer = function (hook_name, args, cb) {
 }
 
 exports.indexWrapper = function (hook_name, args, cb) {
-  args.content = args.content + '<br><br><div style="text-align:center;"><a href="/list">All Pads</a></div>';
+  args.content = args.content + '<br><br><div style="text-align:center;"><a href="list">All Pads</a></div>';
   return cb();
 }
 
