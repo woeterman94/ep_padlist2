@@ -3,8 +3,8 @@
     {
       "name": "list",
       "hooks": {
-        "expressCreateServer": "ep_padlist:expressCreateServer",
-        "eejsBlock_indexWrapper": "ep_padlist:indexWrapper"
+        "expressCreateServer": "ep_padlist2:expressCreateServer",
+        "eejsBlock_indexWrapper": "ep_padlist2:indexWrapper"
       }
     }
   ]

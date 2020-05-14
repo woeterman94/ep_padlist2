@@ -10,7 +10,7 @@ exports.expressCreateServer = function (hook_name, args, cb) {
     };
     padManager.listAllPads(function(null_value, pads){
       render_args.pads = pads.padIDs;
-      res.send( eejs.require('ep_padlist/templates/pads.html', render_args) );
+      res.send( eejs.require('ep_padlist2/templates/pads.html', render_args) );
       cb();
     });
   });

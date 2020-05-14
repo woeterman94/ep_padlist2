@@ -1,16 +1,21 @@
-## ep_padlist
+## ep_padlist2
 
-A plugin for etherpad-lite to list all pads on a page.
+[Etherpad](https://etherpad.org/) plugin to display a list of all
+pads.
 
 The list is available at `/list`
 
+This is a fork of [ep_padlist](https://github.com/esripdx/ep_padlist),
+which is no longer maintained.
+
 ### Installation
 
-npm install https://github.com/esripdx/ep_padlist/tarball/master
+npm install https://github.com/rhansen/ep_padlist2/tarball/master
 
 ### License
 
-Copyright 2013 Esri, Inc
+Copyright 2013 Esri, Inc\
+Copyright 2020 Richard Hansen
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

@@ -1,11 +1,16 @@
 {
-  "name": "ep_padlist",
-  "version": "0.0.3",
-  "description": "Display a list of pads at /list",
+  "name": "ep_padlist2",
+  "version": "0.0.1",
+  "description": "Etherpad plugin to display a list of pads.",
+  "homepage": "https://github.com/rhansen/ep_padlist2",
+  "bugs": "https://github.com/rhansen/ep_padlist2/issues",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/rhansen/ep_padlist2.git"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Aaron Parecki",
-  "license": "Apache 2.0"
+  "license": "Apache-2.0"
 }
