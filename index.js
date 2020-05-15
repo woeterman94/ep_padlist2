@@ -4,22 +4,18 @@ var eejs = require('ep_etherpad-lite/node/eejs')
   , express = require('ep_etherpad-lite/node_modules/express');
 
 exports.expressCreateServer = function (hook_name, args, cb) {
-  args.app.get('/list', function(req, res) {
+  args.app.get('/list', async function(req, res) {
+    var pads = await padManager.listAllPads();
     var render_args = {
-      pads: []
+      pads: pads.padIDs
     };
-    padManager.listAllPads(function(null_value, pads){
-      render_args.pads = pads.padIDs;
-      res.send( eejs.require('ep_padlist2/templates/pads.html', render_args) );
-      cb();
-    });
+    res.send( eejs.require('ep_padlist2/templates/pads.html', render_args) );
+    cb();
   });
-
-  args.app.use('/list/static', express.static(__dirname + '/static'))
+  args.app.use('/list/static', express.static(__dirname + '/static'));
 }
 
 exports.indexWrapper = function (hook_name, args, cb) {
   args.content = args.content + '<br><br><div style="text-align:center;"><a href="list">All Pads</a></div>';
   return cb();
 }
-
