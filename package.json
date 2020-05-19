@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "Etherpad plugin to display a list of pads.",
   "homepage": "https://github.com/rhansen/ep_padlist2",
-  "bugs": "https://github.com/rhansen/ep_padlist2/issues",
+  "bugs": {
+    "url": "https://github.com/rhansen/ep_padlist2/issues"
+  },
   "repository": {
     "type": "git",
     "url": "http://github.com/rhansen/ep_padlist2.git"
