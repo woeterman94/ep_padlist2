@@ -15,6 +15,7 @@ exports.expressCreateServer = function (hook_name, args, cb) {
 }
 
 exports.eejsBlock_indexWrapper = function(hookName, args, cb) {
-  args.content = args.content + '<br><br><div style="text-align:center;"><a href="list">All Pads</a></div>';
+  args.content = args.content +
+      '<div style="text-align:center; margin-top:2em;"><a href="list">All Pads</a></div>';
   return cb();
 }
