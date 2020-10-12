@@ -1,8 +1,9 @@
 /* global $ */
 
 $(() => {
-  $('input').on('input', function(e) {
-    const query = $(this).val();
+  const searchBox = $('input');
+  const filter = () => {
+    const query = searchBox.val();
     const list = $('ul');
     if (!query.length) {
       list.removeClass('filtering');
@@ -16,5 +17,7 @@ $(() => {
         item.toggleClass('visible', regex.test(padId));
       });
     }
-  });
+  };
+  filter();
+  searchBox.on('input', filter);
 });
