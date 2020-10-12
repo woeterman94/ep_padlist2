@@ -11,7 +11,6 @@ exports.expressCreateServer = function (hook_name, args, cb) {
     };
     res.send( eejs.require('ep_padlist2/templates/pads.html', render_args) );
   });
-  args.app.use('/list/static', express.static(__dirname + '/static'));
   return cb();
 }
 
