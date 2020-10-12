@@ -11,8 +11,5 @@
     "url": "http://github.com/rhansen/ep_padlist2.git"
   },
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "license": "Apache-2.0"
 }
