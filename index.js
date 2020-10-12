@@ -10,9 +10,9 @@ exports.expressCreateServer = function (hook_name, args, cb) {
       pads: pads.padIDs
     };
     res.send( eejs.require('ep_padlist2/templates/pads.html', render_args) );
-    cb();
   });
   args.app.use('/list/static', express.static(__dirname + '/static'));
+  return cb();
 }
 
 exports.eejsBlock_indexWrapper = function(hookName, args, cb) {
