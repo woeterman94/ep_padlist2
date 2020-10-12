@@ -15,7 +15,7 @@ exports.expressCreateServer = function (hook_name, args, cb) {
   args.app.use('/list/static', express.static(__dirname + '/static'));
 }
 
-exports.indexWrapper = function (hook_name, args, cb) {
+exports.eejsBlock_indexWrapper = function(hookName, args, cb) {
   args.content = args.content + '<br><br><div style="text-align:center;"><a href="list">All Pads</a></div>';
   return cb();
 }
