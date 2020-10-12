@@ -1,7 +1,7 @@
 /* global $ */
 
 $(() => {
-  $('input').on('keyup', function(e) {
+  $('input').on('input', function(e) {
     const query = $(this).val();
     const list = $('ul');
     if (!query.length) {
