@@ -13,7 +13,7 @@
     <input type="search" placeholder="search pads">
   </div>
   <ul>
-    <% pads.forEach(function(pad){ %>
+    <% pads.forEach((pad) => { %>
       <li><a href="p/<%= pad.toString() %>"><%= pad.toString() %></a></li>
     <% }) %>
   </ul>

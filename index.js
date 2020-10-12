@@ -1,19 +1,18 @@
-var eejs = require('ep_etherpad-lite/node/eejs')
-  , padManager = require('ep_etherpad-lite/node/db/PadManager')
+/* global exports, require */
 
-exports.expressCreateServer = function (hook_name, args, cb) {
-  args.app.get('/list', async function(req, res) {
-    var pads = await padManager.listAllPads();
-    var render_args = {
-      pads: pads.padIDs
-    };
-    res.send( eejs.require('ep_padlist2/templates/pads.html', render_args) );
+const eejs = require('ep_etherpad-lite/node/eejs');
+const padManager = require('ep_etherpad-lite/node/db/PadManager');
+
+exports.expressCreateServer = (hookName, {app}, cb) => {
+  app.get('/list', async (req, res) => {
+    const pads = await padManager.listAllPads();
+    res.send(eejs.require('ep_padlist2/templates/pads.html', {pads: pads.padIDs}));
   });
   return cb();
-}
+};
 
-exports.eejsBlock_indexWrapper = function(hookName, args, cb) {
-  args.content = args.content +
+exports.eejsBlock_indexWrapper = (hookName, context, cb) => {
+  context.content = context.content +
       '<div style="text-align:center; margin-top:2em;"><a href="list">All Pads</a></div>';
   return cb();
-}
+};
