@@ -1,9 +1,7 @@
 /* global $ */
 
 $(() => {
-  const searchBox = $('input');
-  const filter = () => {
-    const query = searchBox.val();
+  const filter = (query) => {
     const list = $('ul');
     if (!query.length) {
       list.removeClass('filtering');
@@ -18,6 +16,15 @@ $(() => {
       });
     }
   };
-  filter();
-  searchBox.on('input', filter);
+  const queryParams = new URLSearchParams(window.location.search);
+  const searchBox = $('input');
+  const q = queryParams.has('q') ? queryParams.get('q') : searchBox.val();
+  filter(q);
+  searchBox.val(q);
+  searchBox.on('input', () => {
+    const val = searchBox.val();
+    queryParams.set('q', val);
+    history.replaceState(null, '', `${window.location.pathname}?${queryParams.toString()}`);
+    filter(val);
+  });
 });
