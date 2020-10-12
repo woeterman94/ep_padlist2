@@ -1,7 +1,7 @@
 {
   "parts": [
     {
-      "name": "list",
+      "name": "ep_padlist2",
       "hooks": {
         "expressCreateServer": "ep_padlist2:expressCreateServer",
         "eejsBlock_indexWrapper": "ep_padlist2:indexWrapper"
