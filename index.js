@@ -5,8 +5,8 @@ const padManager = require('ep_etherpad-lite/node/db/PadManager');
 
 exports.expressCreateServer = (hookName, {app}, cb) => {
   app.get('/list', async (req, res) => {
-    const pads = await padManager.listAllPads();
-    res.send(eejs.require('ep_padlist2/templates/pads.html', {pads: pads.padIDs}));
+    const padIds = (await padManager.listAllPads()).padIDs;
+    res.send(eejs.require('ep_padlist2/templates/pads.html', {padIds}));
   });
   return cb();
 };
