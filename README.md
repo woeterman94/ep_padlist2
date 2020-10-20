@@ -10,7 +10,19 @@ which is no longer maintained.
 
 ### Installation
 
-npm install https://github.com/ether/ep_padlist2/tarball/master
+To install the current published package:
+
+```shell
+cd /path/to/etherpad
+npm i ep_padlist2
+```
+
+To install the latest commit in Git:
+
+```shell
+cd /path/to/etherpad
+npm i ether/ep_padlist2
+```
 
 ### License
 
