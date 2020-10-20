@@ -10,7 +10,7 @@ which is no longer maintained.
 
 ### Installation
 
-npm install https://github.com/rhansen/ep_padlist2/tarball/master
+npm install https://github.com/ether/ep_padlist2/tarball/master
 
 ### License
 
